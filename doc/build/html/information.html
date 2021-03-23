@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Information &mdash; Automatic camera calibration tool 1.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Automatic camera calibration tool 1.1 documentation" href="index.html"/>
+        <link rel="next" title="Usage" href="usage.html"/>
+        <link rel="prev" title="Welcome to Automatic camera calibration tool’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Automatic camera calibration tool
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Navigation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface.html">Interface description</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Automatic camera calibration tool</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Information</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/information.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="information">
+<span id="information-label"></span><h1>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h1>
+<p>This tool contains different methods for automatic surveillance camera calibration.</p>
+<p>The implemented are: <a class="reference external" href="https://ieeexplore.ieee.org/abstract/document/8909905">OptInOpt</a>,  <a class="reference external" href="https://ieeexplore.ieee.org/document/9363417">PlaneCalib</a> and <a class="reference external" href="https://link.springer.com/article/10.1007/s00138-020-01125-x">LandmarkCalib</a>.
+These methods serves for camera calibration based on 2D-3D correspondences of some keypoints. Contrary to classical PnP solution 3D keypoints does not lie within common coordinate system.
+More information can be found in <a class="reference internal" href="usage.html#usage-label"><span class="std std-ref">Usage</span></a> or see proper papers.</p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>tensorflow (tensorflow-gpu)</li>
+<li>opencv-python</li>
+<li>scipy</li>
+</ul>
+<p>Tensorflow version TF1 and TF2 are acceptable.
+Tested on the following installation:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">absl</span><span class="o">-</span><span class="n">py</span><span class="o">==</span><span class="mf">0.10</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">astor</span><span class="o">==</span><span class="mf">0.8</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">gast</span><span class="o">==</span><span class="mf">0.4</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">google</span><span class="o">-</span><span class="n">pasta</span><span class="o">==</span><span class="mf">0.2</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">grpcio</span><span class="o">==</span><span class="mf">1.32</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">h5py</span><span class="o">==</span><span class="mf">2.10</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">importlib</span><span class="o">-</span><span class="n">metadata</span><span class="o">==</span><span class="mf">2.0</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">Keras</span><span class="o">-</span><span class="n">Applications</span><span class="o">==</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">8</span>
+<span class="n">Keras</span><span class="o">-</span><span class="n">Preprocessing</span><span class="o">==</span><span class="mf">1.1</span><span class="o">.</span><span class="mi">2</span>
+<span class="n">Markdown</span><span class="o">==</span><span class="mf">3.2</span><span class="o">.</span><span class="mi">2</span>
+<span class="n">numpy</span><span class="o">==</span><span class="mf">1.19</span><span class="o">.</span><span class="mi">2</span>
+<span class="n">opencv</span><span class="o">-</span><span class="n">python</span><span class="o">==</span><span class="mf">4.4</span><span class="o">.</span><span class="mf">0.44</span>
+<span class="n">protobuf</span><span class="o">==</span><span class="mf">3.13</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">scipy</span><span class="o">==</span><span class="mf">1.5</span><span class="o">.</span><span class="mi">2</span>
+<span class="n">six</span><span class="o">==</span><span class="mf">1.15</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">tensorboard</span><span class="o">==</span><span class="mf">1.14</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">tensorflow</span><span class="o">-</span><span class="n">estimator</span><span class="o">==</span><span class="mf">1.14</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">tensorflow</span><span class="o">-</span><span class="n">gpu</span><span class="o">==</span><span class="mf">1.14</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">termcolor</span><span class="o">==</span><span class="mf">1.1</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">Werkzeug</span><span class="o">==</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">wrapt</span><span class="o">==</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">zipp</span><span class="o">==</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="usage.html" class="btn btn-neutral float-right" title="Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to Automatic camera calibration tool’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Vojtech Bartl.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
